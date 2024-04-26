@@ -1,8 +1,51 @@
+//input: [2,3,7,9], 3
+//output: true 
 function recursiveSearch(arr, target) {
-  // type your code here
+  //starting at first element in arr check if element in arr is the target 
+  for (const value of arr) {
+    if (value === target) {
+      //return true once found
+      return true
+    }
+    //call function to then repeat the process
+    else if (value != target) {
+      recursiveSearch()
+    }
+  }
 }
 
+/*
 //non recursive way - with loops
+//using for...of
+function usingForOf(arr, target){
+  for(const value of arr){
+    if(value === target){
+      return true
+    }
+  }
+return false
+}
+
+//using for...in
+function usingForIn(arr, target){
+  for (const value in arr){
+    if (arr[value] === target){
+      return true
+    }
+  }
+  return false
+}
+
+//using traditional for loop
+function traditionalForLoop(arr, target){
+  for (let i=0; i<arr.length; i++){
+    if(arr[i]===target){
+      return true
+    }
+  }
+  return false
+}
+*/
 
 if (require.main === module) {
   // add your own tests in here
